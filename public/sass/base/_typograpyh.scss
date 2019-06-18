@@ -1,0 +1,43 @@
+@font-face {
+  font-family: "Operator Mono";
+  src: url("../fonts/main/OperatorMono-BoldItalic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Operator Mono";
+  src: url("../fonts/main/OperatorMono-BookItalic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Operator Mono";
+  src: url("../fonts/main/OperatorMono-LightItalic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Operator Mono";
+  src: url("../fonts/main/OperatorMono-Medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Operator Mono";
+  src: url("../fonts/main/OperatorMono-XLightItalic.otf") format("opentype");
+}
+
+body {
+  font-family: "Operator Mono", sans-serif;
+  line-height: 1.8;
+  font-weight: 400;
+  color: $main-color;
+}
+
+.heading-secondary {
+  font-size: 2.6rem;
+  color: $color-black;
+  text-transform: capitalize;
+}
+
+.heading-tertiary {
+  font-size: 2.1rem;
+  color: $color-black-light;
+  text-transform: capitalize;
+}

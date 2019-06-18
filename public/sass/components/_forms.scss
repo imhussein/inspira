@@ -1,0 +1,79 @@
+.form {
+  &__group {
+    margin-bottom: 1.1rem;
+  }
+
+  &__label {
+    opacity: 1;
+    transform: translateY(0.3rem);
+    color: $primary-color;
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-top: 0.3rem;
+    transition: transform 0.3s ease-out;
+    margin-left: 1.6rem;
+    display: block;
+  }
+
+  &__control {
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: $color-white;
+    padding: 1.6rem 2rem;
+    font-size: 1.7rem;
+    color: $color-black;
+    font-family: inherit;
+    font-weight: 400;
+    border-radius: 0.3rem;
+    box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.1);
+    border: 2px solid transparent;
+
+    &:focus {
+      border: 2px solid $primary-color;
+      box-shadow: 0 0.1rem 0.4rem rgba($primary-color, 0.1);
+    }
+
+    &::placeholder {
+      color: $main-color;
+      font-family: inherit;
+    }
+  }
+
+  &__control:placeholder-shown + &__label {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+
+  &__input-file {
+    display: none;
+  }
+
+  &__file {
+    position: relative;
+  }
+
+  &__control__file {
+    position: relative;
+  }
+
+  &__file-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+
+  textarea {
+    min-height: 22rem;
+  }
+
+  &__file__btn {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    right: 0;
+  }
+}

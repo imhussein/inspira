@@ -1,0 +1,58 @@
+{{> _sidebar}}
+<div class="admin__posts admin__panel">
+  <div class="admin__navbar">
+    <ul class="admin__list">
+      <li class="admin__item">
+        <a href="/admin/posts" data-link="/admin/posts" class="admin__link">Posts</a>
+      </li>
+      <li class="admin__item">
+        <a href="/admin/posts/add" class="admin__link" data-link="/admin/posts/add">Add Post</a>
+      </li>
+    </ul>
+    <ul class="admin__auth__links">
+      <li class="admin__item">
+        <a href="/admin/users/profile/{{user._id}}" class="admin__link admin__user">{{user.username}}</a>
+      </li>
+      <li class="admin__item">
+        <a href="/users/logout" class="admin__link admin__logout">Logout</a>
+      </li>
+    </ul>
+  </div>
+  <div class="admin__addform">
+    <div class="admin__card">
+      <form class="form" enctype="multipart/form-data" action="/admin/posts/add" method="POST">
+        <div class="admin__card-header">
+          <div class="text-center">
+            <h2 class="heading-secondary">
+              Add New Post
+            </h2>
+          </div>
+        </div>
+        <div class="admin__card-body">
+          <div class="form__group">
+            <input value="{{titleField}}" type="text" name="title" id="title" class="form__control" placeholder="Title">
+            <label for="title" class="form__label">Title</label>
+          </div>
+          <div class="form-group">
+            <textarea type="text" name="details" id="details" class="form__control"
+              placeholder="Details">{{details}}</textarea>
+            <label for="details" class="form__label">Details</label>
+          </div>
+          <div class="form-group form__file">
+            <input type="file" name="image" id="image" class="form__input-file">
+            <input type="text" placeholder="Upload Post Thumbnail" name="imageName" id="imageName"
+              class="form__control form__control__file">
+            <button class="btn btn--primary form__file__btn">Choose File</button>
+            <label for="image" class="form__file-label"></label>
+          </div>
+          <div class="mt-2">
+            <img src="" class="admin__post-image">
+          </div>
+        </div>
+        <div class="admin__card-action">
+          <button class="btn btn--block btn--primary">Publish New Post</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

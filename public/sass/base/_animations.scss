@@ -1,0 +1,11 @@
+@keyframes pupple {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(7);
+    opacity: 0.5;
+  }
+}

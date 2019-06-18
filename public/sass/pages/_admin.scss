@@ -1,0 +1,114 @@
+.admin {
+  &__panel {
+    width: calc(100% - 35rem);
+    left: 35rem;
+    position: relative;
+    top: 0;
+    padding-top: 4rem;
+  }
+
+  &__navbar {
+    @include clearfix;
+    width: 85%;
+    margin: auto;
+  }
+
+  &__auth__links {
+    float: right;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__list {
+    float: left;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  &__item {
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: bold;
+    letter-spacing: 0.04rem;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      color: $main-color;
+      text-decoration: none;
+      padding: 0 1rem;
+      opacity: 0.7;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 0.2rem;
+      width: 100%;
+      left: 0;
+      bottom: -0.7rem;
+      background-color: $primary-color;
+      opacity: 0;
+    }
+
+    &.active {
+      color: $color-black;
+      opacity: 1;
+
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__user,
+  &__logout {
+    padding: 1rem 4rem;
+  }
+
+  &__addform {
+    width: 85%;
+    margin: 5rem auto 0;
+  }
+
+  &__post-image {
+    width: 50%;
+  }
+
+  &__logout {
+    &:link,
+    &:visited {
+      color: $color-black;
+      border-radius: 10rem;
+      padding: 1rem 4rem;
+      border: 0.1rem solid $main-color;
+      font-size: 1.6rem;
+      text-decoration: none;
+      box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.1);
+      background-color: rgba($primary-color, 0.25);
+      color: $primary-color;
+      border: 0.1rem solid transparent;
+    }
+  }
+
+  &__user {
+    &:link,
+    &:visited {
+      color: $color-black;
+      border-radius: 10rem;
+      padding: 1rem 4rem;
+      border: 0.2rem solid $main-color;
+      font-size: 1.6rem;
+      text-decoration: none;
+      box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.1);
+    }
+  }
+}

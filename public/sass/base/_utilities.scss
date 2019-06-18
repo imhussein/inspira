@@ -1,0 +1,26 @@
+.text-center {
+  text-align: center;
+}
+
+[src=""] {
+  visibility: hidden;
+}
+
+@for $i from 1 through 10 {
+  .mb-#{$i} {
+    margin-bottom: #{$i}rem;
+  }
+  .mt-#{$i} {
+    margin-top: #{$i}rem;
+  }
+  .mr-#{$i} {
+    margin-right: #{$i}rem;
+  }
+  .ml-#{$i} {
+    margin-left: #{$i}rem;
+  }
+}
+
+.d-none {
+  display: none;
+}

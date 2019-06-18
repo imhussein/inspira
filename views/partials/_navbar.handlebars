@@ -1,0 +1,15 @@
+{{#if isHomePage}}
+<nav class="navbar {{#if homePage}}navbar--main{{else}}navbar--secondary {{/if}}{{#if dashboard}}d-none{{/if}}">
+  <div class="container">
+    <a href="/" class="navbar__brand-logo">{{brand}}</a>
+    <ul class="navbar__list">
+      <li class="navbar__item">
+        <a href="/users/login" class="navbar__link" data-link="/users/login">Login</a>
+      </li>
+      <li class="navbar__item">
+        <a href="/users/register" data-link="/users/register" class="navbar__link">Register</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+{{/if}}

@@ -1,0 +1,83 @@
+.sidebar {
+  &__admin {
+    height: 100vh;
+    position: fixed;
+    width: 350px;
+  }
+
+  &__profile {
+    margin-top: 4rem;
+  }
+
+  &__info {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  &__email {
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+
+  &__profile__img {
+    position: relative;
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 114%;
+      height: 115%;
+      left: -7px;
+      top: -7px;
+      border-radius: 50%;
+      background-color: transparent;
+      border: 3px solid rgba($primary-color, 0.7);
+    }
+  }
+
+  &__list {
+    list-style: none;
+    text-align: center;
+    margin-top: 4rem;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      color: $color-black-light;
+      text-decoration: none;
+      font-size: 1.8rem;
+      border-radius: 5rem;
+      padding: 1.8rem 8rem;
+
+      i {
+        color: $color-black;
+        margin-right: 1rem;
+        font-size: 2rem;
+      }
+
+      &.active {
+        box-shadow: 0 0.07rem 0.3rem rgba($color-black, 0.1);
+        background-color: $color-white;
+
+        i {
+          color: $primary-color;
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+}
