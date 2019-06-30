@@ -10,7 +10,8 @@ const passport = require("passport");
 router.get("/login", (req, res) => {
   res.render("users/login", {
     homePage: false,
-    title: "Login"
+    title: "Login",
+    isHomePage: true,
   });
 });
 
@@ -18,7 +19,8 @@ router.get("/login", (req, res) => {
 router.get("/register", (req, res) => {
   res.render("users/register", {
     homePage: false,
-    title: "Register"
+    title: "Register",
+    isHomePage: true,
   });
 });
 

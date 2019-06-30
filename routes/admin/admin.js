@@ -22,7 +22,7 @@ const storage = multer.diskStorage({
 const upload = multer({
   storage,
   limits: { fieldSize: 1000000 },
-  fileFilter: function(req, file, callback) {
+  fileFilter: function (req, file, callback) {
     const fileTypes = /jpg|jpeg|png|gif/;
     const fileType = fileTypes.test(
       path
@@ -68,6 +68,7 @@ router.get("/posts", isAuthenticated, (req, res) => {
         title: "Posts",
         posts
       });
+      console.log(posts);
     })
     .catch(err => {
       console.log(err);
@@ -110,7 +111,7 @@ router.post("/posts/add", upload, isAuthenticated, (req, res) => {
       details
     });
   } else {
-    upload(req, res, function(err) {
+    upload(req, res, function (err) {
       if (err) {
         res.render("admin/posts/add", {
           errors,
